@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admission Form</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+input, select, textarea {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: auto;
+  padding: 10px 18px;
+  background: linear-gradient(45deg, #28a745, #218838);
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #218838, #1e7e34);
+  transform: scale(1.05);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">ADMISSION FORM 2026-27</div>
+
+<form id="form">
+
+<div class="grid">
+
+<div class="field">
+<label>CLASS</label>
+<select name="class">
+<option>9वीं</option>
+<option>10वीं</option>
+<option>11वीं</option>
+<option>12वीं</option>
+</select>
+</div>
+
+<div class="field">
+<label>DAKHIL KHARIJ NUMBER</label>
+<input name="tc">
+</div>
+
+<div class="field">
+<label>STUDENT NAME</label>
+<input name="studentName">
+</div>
+
+<div class="field">
+<label>FATHER'S NAME</label>
+<input name="fatherName">
+</div>
+
+<div class="field">
+<label>MOTHER'S NAME</label>
+<input name="motherName">
+</div>
+
+<div class="field">
+<label>DATE OF BIRTH</label>
+<input name="dob" type="date">
+</div>
+
+<div class="field">
+<label>GENDER</label>
+<select name="gender">
+<option>Male</option>
+<option>Female</option>
+</select>
+</div>
+
+<div class="field">
+<label>CATEGORY</label>
+<select name="category">
+<option>SC</option>
+<option>ST</option>
+<option>OBC</option>
+<option>GEN</option>
+</select>
+</div>
+
+<div class="field">
+<label>SAMAGRA ID</label>
+<input name="samagraId" maxlength="9" oninput="validateNumber(this,9)">
+</div>
+
+<div class="field">
+<label>STUDENT NAME AS SAMAGRA</label>
+<input name="samagraName">
+</div>
+
+<div class="field">
+<label>STUDENT DOB AS SAMAGRA</label>
+<input name="samagraDob" type="date">
+</div>
+
+<div class="field">
+<label>STUDENT CATEGORY AS SAMAGRA</label>
+<input name="samagraCategory">
+</div>
+
+<div class="field">
+<label>AADHAR NUMBER</label>
+<input name="aadhar" maxlength="12" oninput="validateNumber(this,12)">
+</div>
+
+<div class="field">
+<label>STUDENT NAME AS AADHAR</label>
+<input name="aadharName">
+</div>
+
+<div class="field">
+<label>STUDENT DOB AS AADHAR</label>
+<input name="aadharDob" type="date">
+</div>
+
+<div class="field">
+<label>CAST CERTIFICATE (Y/N)</label>
+<select name="casteCert">
+<option>Yes</option>
+<option>No</option>
+</select>
+</div>
+
+<div class="field">
+<label>CASTE CERTIFICATE NUMBER</label>
+<input name="casteCertNo">
+</div>
+
+<div class="field">
+<label>CASTE CERTIFICATE ISSUED DATE</label>
+<input name="casteDate" type="date">
+</div>
+
+<div class="field">
+<label>ISSUED PLACE OF CASTE CERTIFICATE</label>
+<input name="castePlace">
+</div>
+
+<div class="field">
+<label>STUDENT NAME AS CASTE CERTIFICATE</label>
+<input name="casteName">
+</div>
+
+<div class="field">
+<label>STUDENT DOB AS CASTE CERTIFICATE</label>
+<input name="casteDob" type="date">
+</div>
+
+<div class="field">
+<label>INCOME CERTIFICATE (Y/N)</label>
+<select name="incomeCert">
+<option>Yes</option>
+<option>No</option>
+</select>
+</div>
+
+<div class="field">
+<label>INCOME CERTIFICATE NUMBER</label>
+<input name="incomeCertNo">
+</div>
+
+<div class="field">
+<label>ISSUED DATE OF INCOME CERTIFICATE</label>
+<input name="incomeDate" type="date">
+</div>
+
+<div class="field">
+<label>ANNUAL INCOME</label>
+<input name="income" maxlength="6" oninput="validateNumber(this,6)">
+</div>
+
+<div class="field">
+<label>BPL (Y/N)</label>
+<select name="bpl">
+<option>Yes</option>
+<option>No</option>
+</select>
+</div>
+
+<div class="field">
+<label>BPL NUMBER</label>
+<input name="bplNo">
+</div>
+
+<div class="field">
+<label>LAADLI LAXMI (Y/N)</label>
+<select name="ladli">
+<option>Yes</option>
+<option>No</option>
+</select>
+</div>
+
+<div class="field">
+<label>LAADLI LAXMI CARD NUMBER</label>
+<input name="ladliNo">
+</div>
+
+<div class="field">
+<label>SHRAMIK CARD (Y/N)</label>
+<select name="shramik">
+<option>Yes</option>
+<option>No</option>
+</select>
+</div>
+
+<div class="field">
+<label>SHRAMIK CARD NUMBER</label>
+<input name="shramikNo">
+</div>
+
+<div class="field">
+<label>ADDRESS</label>
+<textarea name="address"></textarea>
+</div>
+
+<div class="field">
+<label>GRAM PANCHAYAT</label>
+<input name="panchayat">
+</div>
+
+<div class="field">
+<label>MOBILE NUMBER (WHATSAPP)</label>
+<input name="mobile" maxlength="10" oninput="validateNumber(this,10)">
+</div>
+
+</div>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+<script>
+const scriptURL = "https://script.google.com/macros/s/AKfycbwhZI1Crha3eVeFSAh7VAkOEduR0wCj4d6C6xs8GWdAqe7aTH0Gj9P_VOTkuizb4VG0/exec";
+
+
+// NUMBER VALIDATION
+function validateNumber(input, maxLength) {
+  input.value = input.value.replace(/[^0-9]/g, '');
+  if (input.value.length > maxLength) {
+    input.value = input.value.slice(0, maxLength);
+  }
+}
+
+// FORM SUBMIT
+document.getElementById("form").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const formData = new FormData(this);
+  const data = {};
+
+  formData.forEach((value, key) => data[key] = value);
+
+  fetch(scriptURL, {
+  method: "POST",
+  body: JSON.stringify(data),
+  headers: {
+    "Content-Type": "application/json"
+  }
+})
+  .then(() => {
+    alert("✅ Data Saved Successfully");
+    document.getElementById("form").reset();
+  })
+  .catch(() => {
+    alert("❌ Error submitting form");
+  });
+});
+</script>
+
+</body>
+</html>
