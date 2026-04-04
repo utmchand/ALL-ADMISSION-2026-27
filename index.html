@@ -103,10 +103,26 @@ h1:hover {
 <div class="field">
 <label>CLASS</label>
 <select name="class">
+<option>-- Select Class --</option>
 <option>9वीं</option>
-<option>10वीं</option>
 <option>11वीं</option>
-<option>12वीं</option>
+</select>
+</div>
+
+<div class="field">
+<label>SUBJECT</label>
+<select name="subject">
+<option>-- Select Subject --</option>
+<option>512-SANSKRIT</option>
+<option>863-IT</option>
+<option>873-AG</option>
+<option>ARTS</option>
+<option>973-AG</option>
+<option>BIOLOGY</option>
+<option>MATHS</option>
+<option>ARTS+IT</option>
+<option>BIO+IT</option>
+<option>MATHS+IT</option>
 </select>
 </div>
 
@@ -138,6 +154,7 @@ h1:hover {
 <div class="field">
 <label>GENDER</label>
 <select name="gender">
+<option>-- Select Gender --</option>
 <option>Male</option>
 <option>Female</option>
 </select>
@@ -146,10 +163,11 @@ h1:hover {
 <div class="field">
 <label>CATEGORY</label>
 <select name="category">
+<option>-- Select Category --</option>
+<option>GEN</option>
+<option>OBC</option>
 <option>SC</option>
 <option>ST</option>
-<option>OBC</option>
-<option>GEN</option>
 </select>
 </div>
 
@@ -247,39 +265,42 @@ h1:hover {
 <div class="field">
 <label>BPL (Y/N)</label>
 <select name="bpl">
+<option>-- Select --</option>
 <option>Yes</option>
 <option>No</option>
 </select>
 </div>
 
 <div class="field">
-<label>BPL NUMBER</label>
+<label>IF YES BPL NUMBER</label>
 <input name="bplNo">
 </div>
 
 <div class="field">
 <label>LAADLI LAXMI (Y/N)</label>
 <select name="ladli">
+<option>-- Select --</option>
 <option>Yes</option>
 <option>No</option>
 </select>
 </div>
 
 <div class="field">
-<label>LAADLI LAXMI CARD NUMBER</label>
+<label>IF YES LAADLI LAXMI CARD NUMBER</label>
 <input name="ladliNo">
 </div>
 
 <div class="field">
 <label>SHRAMIK CARD (Y/N)</label>
 <select name="shramik">
+<option>-- Select --</option>
 <option>Yes</option>
 <option>No</option>
 </select>
 </div>
 
 <div class="field">
-<label>SHRAMIK CARD NUMBER</label>
+<label>IF YES SHRAMIK CARD NUMBER</label>
 <input name="shramikNo">
 </div>
 
@@ -307,7 +328,7 @@ h1:hover {
 </div>
 
 <script>
-const scriptURL = "https://script.google.com/macros/s/AKfycbwmwL7psHRSWy-mvPw_K-ZzMgMWLC1YUFlKSXG6oDOEEoN6k3h8zmllji89rW9lh7s/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbzkDDF2WKgmrnX1iAnTOcPamviEMuFyIEEHTzBiRSyRrmIFJn7b0flsSm51rtnEF_Az/exec";
 
 // NUMBER VALIDATION
 function validateNumber(input, maxLength) {
